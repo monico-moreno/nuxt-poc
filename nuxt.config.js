@@ -53,14 +53,12 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    config: {
-      devtool: '#eval-source-map'
-    },
-
     /*
      ** You can extend webpack config here
      */
     extend(config, ctx) {
+      config.devtool = '#eval-source-map'
+
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
