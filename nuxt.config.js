@@ -1,6 +1,10 @@
 const pkg = require('./package')
 
 module.exports = {
+  router: {
+    middleware: 'monico-mw'
+  },
+
   mode: 'universal',
 
   /*
